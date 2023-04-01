@@ -43,9 +43,11 @@ dependencies {
 	// JPA 연동
 	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-	implementation 'org.springframework.boot:spring-boot-starter'
+	// Spring starter에서 받아서 수정한 msql driver
 	runtimeOnly 'com.mysql:mysql-connector-j'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// JPA 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('test') {
