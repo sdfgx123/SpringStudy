@@ -29,6 +29,9 @@ dependencies {
 	implementation 'javax.servlet:jstl'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 
+	// h2 db 연결 문제 해결을 위한 2.1.214 버전 의존성 추가
+	implementation 'com.h2database:h2:2.1.214'
+
 	// bootstrap
 	implementation group: 'org.webjars' , name: 'bootstrap' , version: '5.1.3'
 
@@ -43,11 +46,17 @@ dependencies {
 	// JPA 연동
 	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-	// Spring starter에서 받아서 수정한 msql driver
+	// MySQL driver which is editted by Spring Starter
 	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	// H2 DB driver setted
+	runtimeOnly 'com.h2database:h2'
 
 	// JPA 의존성 추가
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// devtools dependency : enables editing view not restarting sprning application server
+	implementation 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('test') {
