@@ -1,2 +1,2 @@
-# SpringStudy
-This repository is for testing and studying spring boot
+# Spring Boot 실험실
+기능 및 템플릿 등의 테스트를 위한 리포지토리
